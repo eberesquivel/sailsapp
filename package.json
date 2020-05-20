@@ -2,7 +2,7 @@
   "name": "test-project",
   "private": true,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "App en Sails",
   "keywords": [],
   "dependencies": {
     "sails": "^1.2.4",
@@ -31,9 +31,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/anonymous node/sails user/test-project.git"
+    "url": "git://github.com/eberesquivel/sailsapp.git"
   },
-  "author": "anonymous node/sails user",
+  "author": "Eber Esquivel",
   "license": "",
   "engines": {
     "node": "^12.14"
