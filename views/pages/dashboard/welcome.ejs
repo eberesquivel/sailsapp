@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg viewBox="0 0 900 320" fill="none">
+  <title>Franklin el pez SGV te da la Bienvenida</title>
+  <desc>A cute little basic shape orange fish animated around a dotted blue path on a light blue background</desc>
+  <g>
+    <path id="blob" d="M123.06 42.236C-13.093 19.194.674 225.849 39.884 329.01c23.67 62.273 39.449 83.562 82.049 118.968 80.468 66.877 201.206 31.516 253.826 0 80.024-47.929 80.254-166.897 162.303-107.698 109.753 79.189 253.367 147.771 293.943 73.886 32.46-59.108-8.788-90.672-59.507-108.039-59.736-20.454-192.512-43.238-150.133-107.356 52.973-80.146 233.309 13.776 256.978-47.587 23.669-61.362-15.779-91.417-118.345-120.22-102.566-28.802-54.101 101.436-202.878 11.27-119.021-72.131-234.207 6.832-234.207 92.329-15.55 103.599 157.117 93.262 68.753 194.447-88.365 101.185-152.388 13.9-152.388-56.353 0-114.3 18.936-207.38-117.218-230.422z" fill="#BEDBFF"/>
+    <path id="path" d="M160.649 84.547c-120.8-18.4-108.585 146.622-73.796 229 21 49.728 35 66.728 72.796 95 71.394 53.404 178.517 25.167 225.204 0 71-38.272 71.203-133.272 144-86 97.377 63.235 224.796 118 260.796 59 28.8-47.2-7.796-72.405-52.796-86.272-53-16.334-170.804-34.528-133.204-85.728 47-64 207 11 228-38s-14-73-105-96-48 81-180 9c-105.6-57.6-207.796 5.455-207.796 73.728-13.797 82.727 139.4 74.472 61 155.272s-135.204 11.1-135.204-45c0-91.272 16.8-165.6-104-184z" stroke="#0B54C0" stroke-width="4" stroke-dasharray="5 10"/>
+    <g id="fish">
+      <g id="fish_2">
+        <ellipse id="Ellipse 1" cx="62.5" cy="221" rx="23.5" ry="36" fill="#FFB320"/>
+        <g id="Vector">
+          <path d="M79.383 258.029c5.839 8.339 6.71 17.803 1.944 21.14-4.765 3.336-13.361-.719-19.2-9.058-5.84-8.338-6.71-17.803-1.945-21.14 4.766-3.336 13.362.719 19.2 9.058z" fill="#FFB320"/>
+          <path d="M61.828 270.111c-5.839 8.339-14.435 12.394-19.2 9.058-4.765-3.337-3.895-12.801 1.944-21.14 5.84-8.339 14.435-12.394 19.2-9.058 4.766 3.337 3.895 12.802-1.944 21.14z" fill="#FFB320"/>
+        </g>
+        <circle id="Ellipse 4" cx="58" cy="205" r="6" transform="rotate(-90 58 205)" fill="white"/>
+        <circle id="Ellipse 5" cx="58" cy="205" r="3" transform="rotate(-90 58 205)" fill="black"/>
+      </g>
+    </g>
+  </g>
+</svg>
+<!-- partial -->
+
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MotionPathPlugin.min.js?v=15'></script><script  src="./script.js"></script>
+<script>
+  gsap.registerPlugin(MotionPathPlugin);
+
+    gsap.set("#fish", {xPercent: -50, yPercent: -50, transformOrigin: "50% 50%"});
+
+    gsap.to("#fish", {
+      duration: 19,
+      ease: "none",
+      motionPath: {
+        path: "#path",
+        align: "#path",
+        curviness: 0.5,
+        autoRotate: "90",
+        start: 1,
+        end: 0
+      },
+      repeat: -1
+    });</script>
+</body>
+</html>
